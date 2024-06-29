@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="preg">Pregnancies:</label>
+        <input type="number" name="preg" step="any" required><br>
+        
+        <label for="glu">Glucose:</label>
+        <input type="number" name="glu" step="any" required><br>
+        
+        <label for="bp">Blood Pressure:</label>
+        <input type="number" name="bp" step="any" required><br>
+        
+        <label for="sk">Skin Thickness:</label>
+        <input type="number" name="sk" step="any" required><br>
+        
+        <label for="ins">Insulin:</label>
+        <input type="number" name="ins" step="any" required><br>
+        
+        <label for="bmi">BMI:</label>
+        <input type="number" name="bmi" step="any" required><br>
+        
+        <label for="dpf">Diabetes Pedigree Function:</label>
+        <input type="number" name="dpf" step="any" required><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" step="any" required><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if result %}
+    <h2>Prediction: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
